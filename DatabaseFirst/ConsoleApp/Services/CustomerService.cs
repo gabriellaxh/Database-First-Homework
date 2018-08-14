@@ -1,5 +1,6 @@
 ﻿using ConsoleApp.Models;
 using DataAccess;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace ConsoleApp.Services
@@ -42,6 +43,7 @@ namespace ConsoleApp.Services
             }
         }
 
+        //TODO..
         public void DeleteCustomers()
         {
             using (var context = new OnlineShopEntities())
@@ -67,6 +69,25 @@ namespace ConsoleApp.Services
                 }
 
                 context.SaveChanges();
+            }
+        }
+
+        public List<Customer> SelectCustomers()
+        {
+            using(var context = new OnlineShopEntities())
+            {
+                var customers = context.Customers.Skip(4).ToList();
+
+                return customers;
+            }
+        }
+
+        public int SumAllCustomers()
+        {
+            using(var context = new OnlineShopEntities())
+            {
+                var sum = context.Customers.Count();
+                return sum;
             }
         }
     }
