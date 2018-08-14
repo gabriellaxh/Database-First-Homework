@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\CustomersWithOrders.cs" />
+    <Compile Include="Models\CustomerWithOrWithoutOrders.cs" />
     <Compile Include="Models\ProductEntity.cs" />
     <Compile Include="Models\OrderItemEntity.cs" />
     <Compile Include="Models\OrderEntity.cs" />

@@ -34,7 +34,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="Description" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="Price" Type="int" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="0" />
   </EntityType>
   <Association Name="FK__OrderItem__Order__1920BF5C">
     <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />

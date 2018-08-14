@@ -106,5 +106,43 @@ namespace ConsoleApp.Services
                 return sum;
             }
         }
+
+        public List<CustomersWithOrders> GetCustomersAndOrders()
+        {
+            using (var context = new OnlineShopEntities())
+            {
+                var customersAndOrders = context
+                                                .Customers
+                                                .Join(context.Orders,
+                                                c => c.Id,
+                                                o => o.CustomerId,
+                                                (c, o) => new CustomersWithOrders
+                                                {
+                                                    CustomerFullname = c.Firstname + " " + c.Lastname,
+                                                    OrderId = o.Id
+                                                })
+                                                .ToList();
+
+                return customersAndOrders;
+            }
+        }
+
+        public List<CustomerWithOrWithoutOrders> GetCustomersWithOrWithoutOrders()
+        {
+            using (var context = new OnlineShopEntities())
+            {
+                var customersWithOrWithoutOrders = context.Customers
+                                                          .GroupJoin(context.Orders,
+                                                          c => c.Id,
+                                                          o => o.CustomerId,
+                                                          (c, orders) => new CustomerWithOrWithoutOrders
+                                                          {
+                                                              CustomerFullname = c.Firstname + " " + c.Lastname,
+                                                              Order = (List<Order>)orders
+                                                          })
+                                                          .ToList();
+                return customersWithOrWithoutOrders;
+            }
+        }
     }
 }

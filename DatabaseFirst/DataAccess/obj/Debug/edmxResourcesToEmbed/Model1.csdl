@@ -39,7 +39,7 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" />
     <NavigationProperty Name="OrderItems" Relationship="Self.FK__OrderItem__Produ__1A14E395" FromRole="Products" ToRole="OrderItem" />
   </EntityType>
   <Association Name="FK__Orders__Customer__145C0A3F">

@@ -2,6 +2,7 @@
 using ConsoleApp.Services;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ConsoleApp
 {
@@ -13,7 +14,10 @@ namespace ConsoleApp
             //MakeAnOrder();
             //UpdateLastname();
             //DeleteCustomers();
-            SelectCustomers();
+            //SelectCustomers();
+            //SumTotalUsers();
+            //GetCustomersAndOrders();
+            GetCustomersWithOrWithoutOrders();
         }
 
         public static void Add10Customers()
@@ -143,5 +147,36 @@ namespace ConsoleApp
                 Console.WriteLine(customer.Firstname + " " + customer.Lastname);
             }
         } 
+
+        public static void SumTotalUsers()
+        {
+            var customerService = new CustomerService();
+
+            int customersCount = customerService.SumAllCustomers();
+
+            Console.WriteLine(customersCount);
+        }
+
+        public static void GetCustomersAndOrders()
+        {
+            var customerService = new CustomerService();
+            var list = customerService.GetCustomersAndOrders();
+
+            foreach (var match in list)
+            {
+                Console.WriteLine($"Customer Fullname: {match.CustomerFullname}, Order Id: {match.OrderId}");
+            }
+        }
+
+        public static void GetCustomersWithOrWithoutOrders()
+        {
+            var customerService = new CustomerService();
+            var list = customerService.GetCustomersWithOrWithoutOrders();
+
+            foreach (var match in list)
+            {
+                Console.WriteLine(string.Format("Customer Fullname: {0}, Order Id: {1}", match.CustomerFullname, match.Order.Count > 0 ? match.Order[0].Id.ToString() : "No orders"));
+            }
+        }
     }
 }
