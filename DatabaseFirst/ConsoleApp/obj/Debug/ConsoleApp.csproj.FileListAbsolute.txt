@@ -1,0 +1,15 @@
+C:\Users\Gabriela\source\repos\DatabaseFirst\ConsoleApp\bin\Debug\ConsoleApp.exe.config
+C:\Users\Gabriela\source\repos\DatabaseFirst\ConsoleApp\bin\Debug\ConsoleApp.exe
+C:\Users\Gabriela\source\repos\DatabaseFirst\ConsoleApp\bin\Debug\ConsoleApp.pdb
+C:\Users\Gabriela\source\repos\DatabaseFirst\ConsoleApp\bin\Debug\DataAccess.exe
+C:\Users\Gabriela\source\repos\DatabaseFirst\ConsoleApp\bin\Debug\EntityFramework.dll
+C:\Users\Gabriela\source\repos\DatabaseFirst\ConsoleApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Gabriela\source\repos\DatabaseFirst\ConsoleApp\bin\Debug\DataAccess.pdb
+C:\Users\Gabriela\source\repos\DatabaseFirst\ConsoleApp\bin\Debug\DataAccess.exe.config
+C:\Users\Gabriela\source\repos\DatabaseFirst\ConsoleApp\bin\Debug\EntityFramework.xml
+C:\Users\Gabriela\source\repos\DatabaseFirst\ConsoleApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Gabriela\source\repos\DatabaseFirst\ConsoleApp\obj\Debug\ConsoleApp.csprojAssemblyReference.cache
+C:\Users\Gabriela\source\repos\DatabaseFirst\ConsoleApp\obj\Debug\ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Gabriela\source\repos\DatabaseFirst\ConsoleApp\obj\Debug\ConsoleApp.csproj.CopyComplete
+C:\Users\Gabriela\source\repos\DatabaseFirst\ConsoleApp\obj\Debug\ConsoleApp.exe
+C:\Users\Gabriela\source\repos\DatabaseFirst\ConsoleApp\obj\Debug\ConsoleApp.pdb
