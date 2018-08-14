@@ -10,3 +10,15 @@ C:\Users\Gabriela\source\repos\DatabaseFirst\DataAccess\obj\Debug\DataAccess.csp
 C:\Users\Gabriela\source\repos\DatabaseFirst\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 C:\Users\Gabriela\source\repos\DatabaseFirst\DataAccess\obj\Debug\DataAccess.exe
 C:\Users\Gabriela\source\repos\DatabaseFirst\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\gshirkova\Downloads\Database-First-Homework-master\Database-First-Homework-master\DatabaseFirst\DataAccess\bin\Debug\DataAccess.exe.config
+C:\Users\gshirkova\Downloads\Database-First-Homework-master\Database-First-Homework-master\DatabaseFirst\DataAccess\bin\Debug\DataAccess.exe
+C:\Users\gshirkova\Downloads\Database-First-Homework-master\Database-First-Homework-master\DatabaseFirst\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\gshirkova\Downloads\Database-First-Homework-master\Database-First-Homework-master\DatabaseFirst\DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\gshirkova\Downloads\Database-First-Homework-master\Database-First-Homework-master\DatabaseFirst\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\gshirkova\Downloads\Database-First-Homework-master\Database-First-Homework-master\DatabaseFirst\DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\gshirkova\Downloads\Database-First-Homework-master\Database-First-Homework-master\DatabaseFirst\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\gshirkova\Downloads\Database-First-Homework-master\Database-First-Homework-master\DatabaseFirst\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\gshirkova\Downloads\Database-First-Homework-master\Database-First-Homework-master\DatabaseFirst\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\gshirkova\Downloads\Database-First-Homework-master\Database-First-Homework-master\DatabaseFirst\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\gshirkova\Downloads\Database-First-Homework-master\Database-First-Homework-master\DatabaseFirst\DataAccess\obj\Debug\DataAccess.exe
+C:\Users\gshirkova\Downloads\Database-First-Homework-master\Database-First-Homework-master\DatabaseFirst\DataAccess\obj\Debug\DataAccess.pdb

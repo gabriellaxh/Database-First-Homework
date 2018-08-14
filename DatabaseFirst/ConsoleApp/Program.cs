@@ -2,9 +2,6 @@
 using ConsoleApp.Services;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
@@ -12,10 +9,11 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            // Add10Customers();
-            // MakeAnOrder();
+            //Add10Customers();
+            //MakeAnOrder();
             //UpdateLastname();
-            DeleteCustomers();
+            //DeleteCustomers();
+            SelectCustomers();
         }
 
         public static void Add10Customers()
@@ -117,25 +115,7 @@ namespace ConsoleApp
         {
             var orderService = new OrderService();
 
-            var customer = new CustomerEntity
-            {
-                Id = 10,
-                Firstname = "Dragomir",
-                Lastname = "Slavov",
-                PhoneNumber = "0891456835",
-                SecondPhoneNumber = "0286345",
-                Address = "ul.Lipov cvqt"
-            };
-
-            var product = new ProductEntity
-            {
-                Id = 3,
-                Title = "TV",
-                Description = "Brand new LG 2",
-                Price = 12
-            };
-
-            orderService.MakeAnOrder(customer, product, 3);
+            orderService.MakeAnOrder(17, 3, 6);
         }
 
         public static void UpdateLastname()
@@ -151,5 +131,17 @@ namespace ConsoleApp
 
             customerService.DeleteCustomers();
         }
+
+        public static void SelectCustomers()
+        {
+            var customerService = new CustomerService();
+
+            var selectedCustomers = customerService.SelectCustomers();
+
+            foreach (var customer in selectedCustomers)
+            {
+                Console.WriteLine(customer.Firstname + " " + customer.Lastname);
+            }
+        } 
     }
 }

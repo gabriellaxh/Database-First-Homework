@@ -10,19 +10,19 @@ namespace ConsoleApp.Services
 {
     public class OrderService
     {
-        public void MakeAnOrder(CustomerEntity customer, ProductEntity product, int quantity)
+        public void MakeAnOrder(int customerId, int productId, int quantity)
         {
             using (var context = new OnlineShopEntities())
             {
                 var newOrder = new Order()
                 {
-                    CustomerId = customer.Id
+                    CustomerId = customerId
                 };
 
                 var newOrderItem = new OrderItem
                 {
                     OrderId = newOrder.Id,
-                    ProductId = product.Id,
+                    ProductId = productId,
                     Quantity = quantity
                 };
 

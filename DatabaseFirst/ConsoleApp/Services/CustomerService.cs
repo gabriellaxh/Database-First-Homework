@@ -43,7 +43,6 @@ namespace ConsoleApp.Services
             }
         }
 
-        //TODO..
         public void DeleteCustomers()
         {
             using (var context = new OnlineShopEntities())
@@ -52,17 +51,22 @@ namespace ConsoleApp.Services
                                        .Customers
                                        .Where(x => x.Lastname == "Ivanov")
                                        .ToList();
-                
+
+
                 foreach (var customer in customersToDel)
                 {
-                    var orderToDel = context.Orders.Where(x => x.CustomerId == customer.Id).FirstOrDefault();
+                    var ordersToDelete = context.Orders.Where(o => o.CustomerId == customer.Id);
 
-                    var orderItemToDel = context.OrderItems.Where(x => x.OrderId == orderToDel.Id).FirstOrDefault();
-
-                    if (orderToDel != null && orderItemToDel != null)
+                    foreach (var order in ordersToDelete)
                     {
-                        context.OrderItems.Remove(orderItemToDel);
-                        context.Orders.Remove(orderToDel);
+                        var orderItemsToDelete = context.OrderItems.Where(oi => oi.OrderId == order.Id);
+
+                        foreach (var orderItem in orderItemsToDelete)
+                        {
+                            context.OrderItems.Remove(orderItem);
+                        }
+
+                        context.Orders.Remove(order);
                     }
 
                     context.Customers.Remove(customer);
@@ -72,11 +76,23 @@ namespace ConsoleApp.Services
             }
         }
 
-        public List<Customer> SelectCustomers()
+        public List<CustomerEntity> SelectCustomers()
         {
-            using(var context = new OnlineShopEntities())
+            using (var context = new OnlineShopEntities())
             {
-                var customers = context.Customers.Skip(4).ToList();
+                var customers = context.Customers
+                                       .OrderBy(x => x.Id)
+                                       .Skip(4)
+                                       .Select(c => new CustomerEntity
+                                       {
+                                           Id = c.Id,
+                                           Firstname = c.Firstname,
+                                           Lastname = c.Lastname,
+                                           PhoneNumber = c.PhoneNumber,
+                                           SecondPhoneNumber = c.SecondPhoneNumber,
+                                           Address = c.Address
+                                       })
+                                       .ToList();
 
                 return customers;
             }
@@ -84,7 +100,7 @@ namespace ConsoleApp.Services
 
         public int SumAllCustomers()
         {
-            using(var context = new OnlineShopEntities())
+            using (var context = new OnlineShopEntities())
             {
                 var sum = context.Customers.Count();
                 return sum;
